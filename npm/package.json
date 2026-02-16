@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/nationaldebt",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "National Debt provides real-time access to the US national debt (Debt to the Penny). It returns the total public debt, debt held by the public, intragovernmental holdings, and per-capita debt calculations.",
   "main": "index.js",
   "types": "index.d.ts",
