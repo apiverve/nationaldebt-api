@@ -225,8 +225,9 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient
 
 api = NationaldebtAPIClient("[YOUR_API_KEY]")
 
+query = { "date": "2024-01-15" }
+
 try:
-    query = { "date": "2024-01-15" }
     result = api.execute(query)
     print(result)
 finally:
