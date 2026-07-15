@@ -31,7 +31,7 @@ paths:
           description: >-
             Optional date in YYYY-MM-DD format for historical lookup. Omit for
             current data.
-          example: '2024-01-15'
+          example: '2023-06-15'
       responses:
         '200':
           description: Successful Response
@@ -63,6 +63,9 @@ paths:
                   perCapita: 102049
                   perCapitaFormatted: $102,049
                   population: 335000000
+                  publicDebtRatio: 78.73
+                  perHousehold: 255122.24
+                  perHouseholdFormatted: $255,122
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
