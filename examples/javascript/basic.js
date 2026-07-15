@@ -13,7 +13,12 @@ const API_URL = 'https://api.apiverve.com/v1/nationaldebt';
  */
 async function callNationalDebtAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            date: &#x27;2023-06-15&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
