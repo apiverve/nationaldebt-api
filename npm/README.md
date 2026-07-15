@@ -60,7 +60,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  date: "2024-01-15"
+  date: "2023-06-15"
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +80,7 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  date: "2024-01-15"
+  date: "2023-06-15"
 };
 
 api.execute(query)
@@ -101,7 +101,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  date: "2024-01-15"
+  date: "2023-06-15"
 };
 
     try {
@@ -131,7 +131,10 @@ async function makeRequest() {
     "intragovernmentalDebtFormatted": "$7.27 trillion",
     "perCapita": 102049,
     "perCapitaFormatted": "$102,049",
-    "population": 335000000
+    "population": 335000000,
+    "publicDebtRatio": 78.73,
+    "perHousehold": 255122.24,
+    "perHouseholdFormatted": "$255,122"
   }
 }
 ```
