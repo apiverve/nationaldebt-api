@@ -25,38 +25,62 @@ namespace APIVerve.API.NationalDebt
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
+        public DateTimeOffset? Date { get; set; }
 
         [JsonProperty("totalDebt")]
-        public double TotalDebt { get; set; }
+        public double? TotalDebt { get; set; }
 
         [JsonProperty("totalDebtFormatted")]
         public string TotalDebtFormatted { get; set; }
 
         [JsonProperty("publicDebt")]
-        public double PublicDebt { get; set; }
+        public double? PublicDebt { get; set; }
 
         [JsonProperty("publicDebtFormatted")]
         public string PublicDebtFormatted { get; set; }
 
         [JsonProperty("intragovernmentalDebt")]
-        public double IntragovernmentalDebt { get; set; }
+        public double? IntragovernmentalDebt { get; set; }
 
         [JsonProperty("intragovernmentalDebtFormatted")]
         public string IntragovernmentalDebtFormatted { get; set; }
 
         [JsonProperty("perCapita")]
-        public long PerCapita { get; set; }
+        public long? PerCapita { get; set; }
 
         [JsonProperty("perCapitaFormatted")]
         public string PerCapitaFormatted { get; set; }
 
         [JsonProperty("population")]
-        public long Population { get; set; }
+        public long? Population { get; set; }
+
+        [JsonProperty("publicDebtRatio")]
+        public double? PublicDebtRatio { get; set; }
+
+        [JsonProperty("perHousehold")]
+        public double? PerHousehold { get; set; }
+
+        [JsonProperty("perHouseholdFormatted")]
+        public string PerHouseholdFormatted { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
