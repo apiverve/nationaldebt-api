@@ -35,6 +35,9 @@ namespace APIVerve.API.NationalDebt
         [JsonProperty("date")]
         public DateTimeOffset? Date { get; set; }
 
+        [JsonProperty("recordDate")]
+        public DateTimeOffset? RecordDate { get; set; }
+
         [JsonProperty("totalDebt")]
         public double? TotalDebt { get; set; }
 
