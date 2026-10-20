@@ -26,6 +26,7 @@ declare module '@apiverve/nationaldebt' {
 
   interface NationalDebtData {
       date:                           Date | null;
+      recordDate:                     Date | null;
       totalDebt:                      number | null;
       totalDebtFormatted:             null | string;
       publicDebt:                     number | null;
