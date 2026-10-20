@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/nationaldebt:
     get:
-      summary: Get National Debt
+      summary: National Debt
       description: Get current or historical US national debt data
       operationId: nationaldebt
       parameters:
@@ -53,19 +53,20 @@ paths:
                 status: ok
                 error: null
                 data:
-                  date: '2024-02-01'
-                  totalDebt: 34186489456789.12
-                  totalDebtFormatted: $34.19 trillion
-                  publicDebt: 26912345678901.23
-                  publicDebtFormatted: $26.91 trillion
-                  intragovernmentalDebt: 7274143777887.89
-                  intragovernmentalDebtFormatted: $7.27 trillion
-                  perCapita: 102049
-                  perCapitaFormatted: $102,049
+                  date: '2026-09-14'
+                  recordDate: '2026-09-14'
+                  totalDebt: 40054421967786.91
+                  totalDebtFormatted: $40.05 trillion
+                  publicDebt: 32358452350574.73
+                  publicDebtFormatted: $32.36 trillion
+                  intragovernmentalDebt: 7695969617212.18
+                  intragovernmentalDebtFormatted: $7.70 trillion
+                  perCapita: 119565
+                  perCapitaFormatted: $119,565
                   population: 335000000
-                  publicDebtRatio: 78.73
-                  perHousehold: 255122.24
-                  perHouseholdFormatted: $255,122
+                  publicDebtRatio: 80.79
+                  perHousehold: 298913.6
+                  perHouseholdFormatted: $298,914
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
