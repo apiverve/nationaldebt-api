@@ -3,11 +3,10 @@ National Debt API
 
 National Debt provides real-time access to the US national debt (Debt to the Penny). It returns the total public debt, debt held by the public, intragovernmental holdings, and per-capita debt calculations.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [National Debt API](https://apiverve.com/marketplace/nationaldebt?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-nationaldebt.svg)](https://pypi.org/project/apiverve-nationaldebt/)
+
+This is a Python wrapper for the [National Debt API](https://apiverve.com/marketplace/nationaldebt?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-nationaldebt
 
 ## Configuration
 
-Before using the nationaldebt API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the National Debt API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -44,7 +43,7 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient
 # Initialize the client with your APIVerve API key
 api = NationaldebtAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 try:
     # Make the API call
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The National Debt API documentation is found here: [https://docs.apiverve.com/ref/nationaldebt](https://docs.apiverve.com/ref/nationaldebt?utm_source=pypi&utm_medium=readme).
+The National Debt API documentation is found here: [https://docs.apiverve.com/ref/nationaldebt](https://docs.apiverve.com/ref/nationaldebt?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -82,7 +81,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 ```
 
 ###### Simple Request
@@ -102,16 +101,20 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "date": "2024-02-01",
-    "totalDebt": 34186489456789.12,
-    "totalDebtFormatted": "$34.19 trillion",
-    "publicDebt": 26912345678901.23,
-    "publicDebtFormatted": "$26.91 trillion",
-    "intragovernmentalDebt": 7274143777887.89,
-    "intragovernmentalDebtFormatted": "$7.27 trillion",
-    "perCapita": 102049,
-    "perCapitaFormatted": "$102,049",
-    "population": 335000000
+    "date": "2026-09-14",
+    "recordDate": "2026-09-14",
+    "totalDebt": 40054421967786.91,
+    "totalDebtFormatted": "$40.05 trillion",
+    "publicDebt": 32358452350574.73,
+    "publicDebtFormatted": "$32.36 trillion",
+    "intragovernmentalDebt": 7695969617212.18,
+    "intragovernmentalDebtFormatted": "$7.70 trillion",
+    "perCapita": 119565,
+    "perCapitaFormatted": "$119,565",
+    "population": 335000000,
+    "publicDebtRatio": 80.79,
+    "perHousehold": 298913.6,
+    "perHouseholdFormatted": "$298,914"
   }
 }
 ```
@@ -129,7 +132,7 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient, NationaldebtA
 
 api = NationaldebtAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 try:
     result = api.execute(query)
@@ -150,7 +153,7 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient, NationaldebtA
 
 api = NationaldebtAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 try:
     result = api.execute(query)
@@ -184,7 +187,7 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_nationaldebt.apiClient import NationaldebtAPIClient, NationaldebtAPIClientError
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 # Using context manager ensures proper cleanup
 with NationaldebtAPIClient("[YOUR_API_KEY]") as api:
@@ -210,7 +213,7 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient
 # Enable debug mode
 api = NationaldebtAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -225,7 +228,7 @@ from apiverve_nationaldebt.apiClient import NationaldebtAPIClient
 
 api = NationaldebtAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01-15" }
+query = { "date": "2023-06-15" }
 
 try:
     result = api.execute(query)
@@ -239,7 +242,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -250,12 +253,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
