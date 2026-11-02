@@ -18,7 +18,7 @@ def call_nationaldebt_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;date&#x27;: &#x27;2023-06-15&#x27;}
+        params &#x3D; {&#x27;date&#x27;: &#x27;2023-06-15&#x27;, &#x27;changes&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY

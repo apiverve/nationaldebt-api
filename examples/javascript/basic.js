@@ -15,7 +15,8 @@ async function callNationalDebtAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            date: &#x27;2023-06-15&#x27;
+            date: &#x27;2023-06-15&#x27;,
+            changes: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {
