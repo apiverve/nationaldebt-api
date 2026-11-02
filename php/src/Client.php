@@ -15,7 +15,7 @@ use APIVerve\Nationaldebt\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['date' => '2023-06-15']);
+ * $response = $client->execute(['date' => '2023-06-15', 'changes' => true]);
  * print_r($response);
  * ```
  *
@@ -34,7 +34,8 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'date' => ['type' => 'string', 'required' => false, 'format' => 'date']
+        'date' => ['type' => 'string', 'required' => false, 'format' => 'date'],
+        'changes' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**
