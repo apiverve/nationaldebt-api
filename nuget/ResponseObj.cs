@@ -73,6 +73,27 @@ namespace APIVerve.API.NationalDebt
 
         [JsonProperty("perHouseholdFormatted")]
         public string PerHouseholdFormatted { get; set; }
+
+        [JsonProperty("previousDebt")]
+        public double? PreviousDebt { get; set; }
+
+        [JsonProperty("previousDate")]
+        public DateTimeOffset? PreviousDate { get; set; }
+
+        [JsonProperty("change1d")]
+        public double? Change1D { get; set; }
+
+        [JsonProperty("change30d")]
+        public double? Change30D { get; set; }
+
+        [JsonProperty("change1y")]
+        public double? Change1Y { get; set; }
+
+        [JsonProperty("changePercent1y")]
+        public double? ChangePercent1Y { get; set; }
+
+        [JsonProperty("averageDailyChange30d")]
+        public double? AverageDailyChange30D { get; set; }
     }
 
     public partial class Premium

@@ -15,5 +15,11 @@ namespace APIVerve.API.NationalDebt
         /// </summary>
         [JsonProperty("date")]
         public string Date { get; set; }
+
+        /// <summary>
+        /// Include the previous record's total and the growth over 1 day, 30 days and 1 year
+        /// </summary>
+        [JsonProperty("changes")]
+        public bool? Changes { get; set; }
     }
 }

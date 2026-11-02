@@ -1,7 +1,7 @@
 National Debt API
 ============
 
-National Debt provides real-time access to the US national debt (Debt to the Penny). It returns the total public debt, debt held by the public, intragovernmental holdings, and per-capita debt calculations.
+National Debt provides the US national debt (Debt to the Penny), updated daily from the Treasury. It returns the total public debt, debt held by the public, intragovernmental holdings, per-capita debt calculations, the previous record's total, and on paid plans how much the debt grew over a day, 30 days and a year.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.NationalDebt.svg)](https://www.nuget.org/packages/APIVerve.API.NationalDebt)
@@ -60,7 +60,8 @@ class Program
         var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new NationalDebtQueryOptions {
-            Date = "2023-06-15"
+            Date = "2023-06-15",
+            Changes = true
         };
 
         // Make the API call
@@ -124,7 +125,8 @@ public class Example
         var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new NationalDebtQueryOptions {
-            Date = "2023-06-15"
+            Date = "2023-06-15",
+            Changes = true
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -156,7 +158,8 @@ public class Example
         var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new NationalDebtQueryOptions {
-            Date = "2023-06-15"
+            Date = "2023-06-15",
+            Changes = true
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -193,7 +196,8 @@ public class Example
         var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new NationalDebtQueryOptions {
-            Date = "2023-06-15"
+            Date = "2023-06-15",
+            Changes = true
         };
 
         try
@@ -249,7 +253,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new NationalDebtQueryOptions {
-            Date = "2023-06-15"
+            Date = "2023-06-15",
+            Changes = true
         };
 
         try
@@ -290,7 +295,8 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new NationalDebtQueryOptions {
-    Date = "2023-06-15"
+    Date = "2023-06-15",
+    Changes = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -316,7 +322,8 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new NationalDebtQueryOptions {
-    Date = "2023-06-15"
+    Date = "2023-06-15",
+    Changes = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -334,7 +341,8 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new NationalDebtQueryOptions {
-    Date = "2023-06-15"
+    Date = "2023-06-15",
+    Changes = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -346,7 +354,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new NationalDebtQueryOptions {
-    Date = "2023-06-15"
+    Date = "2023-06-15",
+    Changes = true
 };
 
 using (var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]"))
@@ -366,20 +375,27 @@ using (var apiClient = new NationalDebtAPIClient("[YOUR_API_KEY]"))
   "status": "ok",
   "error": null,
   "data": {
-    "date": "2026-09-14",
-    "recordDate": "2026-09-14",
-    "totalDebt": 40054421967786.91,
-    "totalDebtFormatted": "$40.05 trillion",
-    "publicDebt": 32358452350574.73,
-    "publicDebtFormatted": "$32.36 trillion",
-    "intragovernmentalDebt": 7695969617212.18,
-    "intragovernmentalDebtFormatted": "$7.70 trillion",
-    "perCapita": 119565,
-    "perCapitaFormatted": "$119,565",
+    "date": "2026-10-26",
+    "recordDate": "2026-10-26",
+    "totalDebt": 40528358939415.85,
+    "totalDebtFormatted": "$40.53 trillion",
+    "publicDebt": 32635294814294.48,
+    "publicDebtFormatted": "$32.64 trillion",
+    "intragovernmentalDebt": 7893064125121.37,
+    "intragovernmentalDebtFormatted": "$7.89 trillion",
+    "perCapita": 120980,
+    "perCapitaFormatted": "$120,980",
     "population": 335000000,
-    "publicDebtRatio": 80.79,
-    "perHousehold": 298913.6,
-    "perHouseholdFormatted": "$298,914"
+    "publicDebtRatio": 80.52,
+    "perHousehold": 302450.44,
+    "perHouseholdFormatted": "$302,450",
+    "previousDebt": 40463151897249.19,
+    "previousDate": "2026-10-23",
+    "change1d": 65207042166.66,
+    "change30d": 431180819664.95,
+    "change1y": 2519332979958.45,
+    "changePercent1y": 6.6282,
+    "averageDailyChange30d": 13909058698.87
   }
 }
 ```
