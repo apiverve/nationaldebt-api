@@ -39,6 +39,13 @@ declare module '@apiverve/nationaldebt' {
       publicDebtRatio:                number | null;
       perHousehold:                   number | null;
       perHouseholdFormatted:          null | string;
+      previousDebt:                   number | null;
+      previousDate:                   Date | null;
+      change1D:                       number | null;
+      change30D:                      number | null;
+      change1Y:                       number | null;
+      changePercent1Y:                number | null;
+      averageDailyChange30D:          number | null;
   }
 
   export default class nationaldebtWrapper {

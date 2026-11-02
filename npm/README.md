@@ -1,6 +1,6 @@
 # National Debt API
 
-National Debt provides real-time access to the US national debt (Debt to the Penny). It returns the total public debt, debt held by the public, intragovernmental holdings, and per-capita debt calculations.
+National Debt provides the US national debt (Debt to the Penny), updated daily from the Treasury. It returns the total public debt, debt held by the public, intragovernmental holdings, per-capita debt calculations, the previous record's total, and on paid plans how much the debt grew over a day, 30 days and a year.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/nationaldebt.svg)](https://www.npmjs.com/package/@apiverve/nationaldebt)
 
@@ -57,7 +57,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  date: "2023-06-15"
+  date: "2023-06-15",
+  changes: false
 };
 
 api.execute(query, function (error, data) {
@@ -77,7 +78,8 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  date: "2023-06-15"
+  date: "2023-06-15",
+  changes: false
 };
 
 api.execute(query)
@@ -98,7 +100,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  date: "2023-06-15"
+  date: "2023-06-15",
+  changes: false
 };
 
     try {
@@ -119,20 +122,27 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "date": "2026-09-14",
-    "recordDate": "2026-09-14",
-    "totalDebt": 40054421967786.91,
-    "totalDebtFormatted": "$40.05 trillion",
-    "publicDebt": 32358452350574.73,
-    "publicDebtFormatted": "$32.36 trillion",
-    "intragovernmentalDebt": 7695969617212.18,
-    "intragovernmentalDebtFormatted": "$7.70 trillion",
-    "perCapita": 119565,
-    "perCapitaFormatted": "$119,565",
+    "date": "2026-10-26",
+    "recordDate": "2026-10-26",
+    "totalDebt": 40528358939415.85,
+    "totalDebtFormatted": "$40.53 trillion",
+    "publicDebt": 32635294814294.48,
+    "publicDebtFormatted": "$32.64 trillion",
+    "intragovernmentalDebt": 7893064125121.37,
+    "intragovernmentalDebtFormatted": "$7.89 trillion",
+    "perCapita": 120980,
+    "perCapitaFormatted": "$120,980",
     "population": 335000000,
-    "publicDebtRatio": 80.79,
-    "perHousehold": 298913.6,
-    "perHouseholdFormatted": "$298,914"
+    "publicDebtRatio": 80.52,
+    "perHousehold": 302450.44,
+    "perHouseholdFormatted": "$302,450",
+    "previousDebt": 40463151897249.19,
+    "previousDate": "2026-10-23",
+    "change1d": 65207042166.66,
+    "change30d": 431180819664.95,
+    "change1y": 2519332979958.45,
+    "changePercent1y": 6.6282,
+    "averageDailyChange30d": 13909058698.87
   }
 }
 ```

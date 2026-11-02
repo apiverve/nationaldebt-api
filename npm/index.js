@@ -30,7 +30,7 @@ class nationaldebtWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/nationaldebt';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"date":{"type":"string","required":false,"format":"date"}};
+        this.validationRules = {"date":{"type":"string","required":false,"format":"date"},"changes":{"type":"boolean","required":false,"default":false}};
     }
 
     /**

@@ -15,7 +15,8 @@ const api = new nationaldebtAPI({
 
 // Example query
 var query = {
-  date: "2023-06-15"
+  date: "2023-06-15",
+  changes: false
 };
 
 // Make the API request using callback
