@@ -4,6 +4,6 @@ require_relative "apiverve_nationaldebt/client"
 
 module APIVerve
   module Nationaldebt
-    VERSION = "1.2.4"
+    VERSION = "1.2.5"
   end
 end
