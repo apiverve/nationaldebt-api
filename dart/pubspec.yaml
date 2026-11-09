@@ -1,0 +1,16 @@
+name: apiverve_nationaldebt
+description: "National Debt provides the US national debt (Debt to the Penny), updated daily from the Treasury. It returns the total public debt, debt held by the public, intragovernmental holdings, per-capita debt calculations, the previous record's total, and on paid plans how much the debt grew over a day, 30 days and a year."
+version: 1.2.5
+homepage: https://apiverve.com/marketplace/nationaldebt?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/nationaldebt-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
