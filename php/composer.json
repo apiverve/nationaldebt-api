@@ -1,7 +1,7 @@
 {
     "name": "apiverve/nationaldebt",
     "description": "National Debt provides the US national debt (Debt to the Penny), updated daily from the Treasury. It returns the total public debt, debt held by the public, intragovernmental holdings, per-capita debt calculations, the previous record's total, and on paid plans how much the debt grew over a day, 30 days and a year.",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "type": "library",
     "license": "MIT",
     "authors": [
